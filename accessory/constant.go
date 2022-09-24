@@ -30,4 +30,5 @@ const (
 	TypeShowerSystem       byte = 30
 	TypeTelevision         byte = 31
 	TypeRemoteControl      byte = 32
+	TypeOccupancySensor    byte = 86
 )

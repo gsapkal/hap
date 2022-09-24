@@ -189,6 +189,7 @@ func (s *Server) listenAndServe(ctx context.Context) error {
 	s.port = i
 
 	// Announce the server using dnssd.
+
 	resp, err := dnssd.NewResponder()
 	if err != nil {
 		return fmt.Errorf("dnssd: %s", err)
@@ -473,13 +474,17 @@ func (s *Server) service() (dnssd.Service, error) {
 	// [Radar] http://openradar.appspot.com/radar?id=4931940373233664
 	stripped := strings.Replace(s.a.Info.Name.Value(), " ", "_", -1)
 
+	ip, _, _ := net.SplitHostPort(s.Addr)
+	ifaces := []string{"en0"}
 	cfg := dnssd.Config{
 		Name:   removeAccentsFromString(stripped),
 		Type:   "_hap._tcp",
 		Domain: "local",
 		Host:   strings.Replace(s.uuid, ":", "", -1), // use the id (without the colons) to get unique hostnames
 		Text:   s.txtRecords(),
+		IPs: []net.IP{net.ParseIP(ip)},
 		Port:   s.port,
+		Ifaces: ifaces,
 	}
 
 	return dnssd.NewService(cfg)

@@ -47,7 +47,7 @@ func (srv *Server) pairSetup(res http.ResponseWriter, req *http.Request) {
 	// pair-setup can only be run by one controller simultaneously
 	for addr, _ := range srv.sessions() {
 		if addr != req.RemoteAddr {
-			log.Info.Printf("simulatenous pairings are not allowed")
+			log.Info.Printf("simultaneous pairings are not allowed")
 			tlv8Error(res, M2, TlvErrorBusy)
 			return
 		}
