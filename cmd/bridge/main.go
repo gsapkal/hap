@@ -1,9 +1,12 @@
 package main
 
 import (
-	"github.com/brutella/hap"
-	"github.com/brutella/hap/accessory"
-	"github.com/brutella/hap/log"
+	"github.com/gsapkal/hap"
+	"github.com/gsapkal/hap/accessory"
+	"github.com/gsapkal/hap/characteristic"
+	"github.com/gsapkal/hap/log"
+	"strconv"
+	"strings"
 
 	"context"
 	syslog "log"
