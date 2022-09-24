@@ -2,7 +2,7 @@
 package service
 
 import (
-	"github.com/brutella/hap/characteristic"
+	"github.com/gsapkal/hap/characteristic"
 )
 
 const TypeTemperatureSensor = "8A"

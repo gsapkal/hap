@@ -1,8 +1,8 @@
 package hap
 
 import (
-	"github.com/brutella/hap/accessory"
-	"github.com/brutella/hap/service"
+	"github.com/gsapkal/hap/accessory"
+	"github.com/gsapkal/hap/service"
 
 	"bytes"
 	"fmt"

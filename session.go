@@ -1,8 +1,8 @@
 package hap
 
 import (
-	"github.com/brutella/hap/chacha20poly1305"
-	"github.com/brutella/hap/hkdf"
+	"github.com/gsapkal/hap/chacha20poly1305"
+	"github.com/gsapkal/hap/hkdf"
 
 	"bytes"
 	"encoding/binary"

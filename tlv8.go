@@ -1,7 +1,7 @@
 package hap
 
 import (
-	"github.com/brutella/hap/tlv8"
+	"github.com/gsapkal/hap/tlv8"
 
 	"net/http"
 )
